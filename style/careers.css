@@ -665,3 +665,16 @@ body{
         font-size: 1.5rem;
     }
 }
+.header {
+    position:relative;
+    width: 100%;
+    transition: top 0.3s;
+    height: 5rem; 
+    background-color: rgb(80, 73, 73)
+}
+
+/* Hidden navbar state */
+.header.hidden {
+    top: -5rem;
+    height: 3rem;
+}

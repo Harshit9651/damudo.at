@@ -19,7 +19,7 @@ const { SESSION_SECRET, PORT } = process.env;
 // Middleware
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-app.use('/styles', express.static(path.join(__dirname, 'style')));
+app.use('/style', express.static(path.join(__dirname, 'style')));
 app.use('/lib', express.static(path.join(__dirname, 'lib')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
@@ -52,4 +52,10 @@ app.listen(PORT, () => {
 
 app.get('/',(req,res)=>{
     res.render('index.ejs')
+})
+app.get('/carrer',(req,res)=>{
+  res.render('carrer.ejs')
+})
+app.get('/services',(req,res)=>{
+  res.render('services.ejs')
 })
